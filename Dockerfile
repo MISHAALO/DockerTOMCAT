@@ -1,6 +1,6 @@
    FROM ubuntu:16.04
 
-   RUN apt-get update -y && yum install -y java-1.8.0-openjdk-devel git nano curl htop maven
+   RUN apt-get update -y && apt-get install -y java-1.8.0-openjdk-devel git nano curl htop maven
    COPY files /tmp/files
    RUN groupadd -g 567 tomcat &&\
        useradd -m -u 567 -g 567 tomcat &&\
