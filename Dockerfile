@@ -12,7 +12,8 @@
        git clone https://github.com/boxfuse/boxfuse-sample-java-war-hello.git
        cd boxfuse-sample-java-war-hello/
        mvn package
-       sudo cp hello-1.0.war /d01/tomcat/webapps/
+       cd target/
+       cp hello-1.0.war /d01/tomcat/webapps/
        rm -rf /tmp/files
-
+   EXPOSE 8081:8080
    CMD /d01/tomcat/bin/catalina.sh run 1>&- 2>&-
