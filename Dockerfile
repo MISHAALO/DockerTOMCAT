@@ -2,7 +2,9 @@
 
    RUN apt-get update -y && apt-get install -y java-1.8.0-openjdk-devel git nano curl htop maven
    COPY files /tmp/files
-   RUN groupadd -g 567 tomcat &&\
+   RUN tar xzfv /opt/apache-maven*.tar.gz -C /opt/ && \
+       ln -s /opt/apache-maven-3.3.9/bin/mvn /usr/bin/mvn && \
+       groupadd -g 567 tomcat &&\
        useradd -m -u 567 -g 567 tomcat &&\
        mkdir -p /d01/ &&\
        tar xvf /tmp/files/apache-tomcat*.tar.gz -C /d01/ &&\
