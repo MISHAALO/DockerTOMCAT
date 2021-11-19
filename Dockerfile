@@ -1,6 +1,6 @@
    FROM centos:7
 
-   RUN yum update -y && yum install -y java-1.8.0-openjdk-devel git nano curl htop maven
+   RUN yum update -y && yum install -y java-1.8.0-openjdk-devel nano curl htop git
    COPY files /tmp/files
    RUN tar xzfv /opt/apache-maven*.tar.gz -C /opt/ && \
        ln -s /opt/apache-maven-3.3.9/bin/mvn /usr/bin/mvn && \
