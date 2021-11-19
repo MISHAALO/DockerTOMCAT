@@ -15,5 +15,5 @@
        cd target/
        cp hello-1.0.war /d01/tomcat/webapps/
        rm -rf /tmp/files
-   EXPOSE 8081:8080
+   EXPOSE 8081
    CMD ["nginx", "-g", "daemon off;"]
