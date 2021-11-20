@@ -2,8 +2,8 @@
 
    RUN yum update -y && yum install -y java-1.8.0-openjdk-devel nano curl htop git
    COPY files /tmp/files
-   RUN tar xzfv /opt/apache-maven*.tar.gz -C /opt/ && \
-       ln -s /opt/apache-maven-3.3.9/bin/mvn /usr/bin/mvn && \
+   RUN tar xzfv /tmp/files/apache-maven*.tar.gz -C /opt/ && \
+       ln -s /tmp/files/apache-maven-3.3.9/bin/mvn /usr/bin/mvn && \
        groupadd -g 567 tomcat &&\
        useradd -m -u 567 -g 567 tomcat &&\
        mkdir -p /d01/ &&\
