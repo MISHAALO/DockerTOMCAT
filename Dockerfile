@@ -20,4 +20,4 @@
        cp hello-1.0.war /d01/tomcat/webapps/ &&\
        rm -rf /tmp/files
    EXPOSE 8080
-   CMD CMD ["catalina.sh", "run"]
+   CMD ["catalina.sh", "run"]
