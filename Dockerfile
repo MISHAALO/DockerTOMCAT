@@ -1,5 +1,4 @@
    FROM centos:7
-
    ENV TZ=Europe/Moscow
    RUN yum update -y && yum install epel-release -y && yum update -y
    RUN yum install htop nano java-1.8.0-openjdk-devel git wget curl which -y
