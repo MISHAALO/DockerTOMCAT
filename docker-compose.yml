@@ -1,0 +1,21 @@
+version: '3'
+
+services:
+  tomcat-demoo:
+    build: .
+    image: tomcat-demo:latest
+    environment:
+      - TZ=Europe/Moscow
+    volumes:
+      - C:/webapps:/d01/tomcat/webapps
+
+    container_name: tomcat-demo
+    ports:
+      - "8013:8080"
+      - "8000:8000"      
+    networks:
+      - natasha
+
+networks:
+  natasha:
+   external: true
